@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLACK EVENT GALLARY</title>
+  <link rel="shortcut icon" href="IMAGES/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="gallary.css">
+  <link rel="shortcut icon" href="IMAGES/logo.jpg" type="image/x-icon">
+</head>
+ 
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">BLACK EVENTS</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#project">Awards</a></li>
+      
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+
+
+  <section class="heropage">
+    <h1>	Explore Our Gallery Below — Dive Into Stunning Moments!</h1>
+  </section>
+
+  <div class="gallery">
+    <div class="gallery-item"><img src="IMAGES/bg1.jpg" alt="Image 1"></div>
+    <div class="gallery-item"><img src="IMAGES/bg2.jpg" alt="Image 2"></div>
+    <div class="gallery-item"><img src="IMAGES/bg3.jpg" alt="Image 3"></div>
+    <div class="gallery-item"><img src="IMAGES/bg4.jpg" alt="Image 4"></div>
+    <div class="gallery-item"><img src="IMAGES/bg6.jpg" alt="Image 5"></div>
+    <div class="gallery-item"><img src="IMAGES/bg5.jpg" alt="Image 6"></div>
+    <!-- Add more images as needed -->
+     <div class="gallery-item"><img src="IMAGES/bg7.jpg" alt="Image 1"></div>
+    <div class="gallery-item"><img src="IMAGES/bg8.jpg" alt="Image 2"></div>
+    <div class="gallery-item"><img src="IMAGES/bg9.jpg" alt="Image 3"></div>
+    <div class="gallery-item"><img src="IMAGES/bg10.jpg" alt="Image 4"></div>
+    
+  </div>
+
+  <section class="projectpage" id="project">
+    <h1>Event Organization & Awards</h1>
+    <div class="can">
+
+    <div class="award">
+      <img src="IMAGES/GYA.jpg" alt=""> 
+    
+      <div class="divv"><h4>GLOBAL YOUTH EXCELLENCE AWARDS</h4>
+      Empowering and Celebrating Young talents in Business, Art and Entertainment.
+      <a href="#norm"><button>Nominate</button></div></a>
+    </div>
+
+    <div class="award">
+      <img src="IMAGES/GEA.jpg" alt=""> 
+    
+      <div class="divv"><h4>GLOBAL EMINENCE AWARDS</h4>
+      Awarding Excellence globally in Arts & Entertainment and buliding a society of
+       Innovators and Achievers
+      <a href="#norm"><button>Nominate</button></div></a>
+    </div>
+
+    <div class="award">
+      <img src="IMAGES/GEAMS.jpg" alt=""> 
+    
+      <div class="divv"><h4>GHANA ENTERTAINMENT AWARDS & SUMMIT</h4>
+      Honoring and Celebrating talents in  Art and Entertainment industry
+      <a href="#norm"><button>Nominate</button></div></a>
+    </div>
+
+    <div class="award">
+      <img src="IMAGES/MME.jpg" alt=""> 
+    
+      <div class="divv"><h4>MR AND MRS ELEGANCE</h4>
+      Spotlighting youth and Promoting Ghana through pageantry and modeling
+      <a href="#norm"><button>Nominate</button></div></a>
+    </div>
+    
+  </section>
+
+
+  <section class="norminatepage" id="norm">
+    <div class="norminate">
+      <div class="icon"><img src="IMAGES/logo.jpg" alt=""></div>
+      <form action="https://formspree.io/f/xzzraypj" method="POST">
+        <div>FULL NAME<br><input type="text" name="name" placeholder="insert name for nomination"required></div>
+        <div>TEL<br><input type="tel" name="phone" placeholder="insert mobile number" required></div>
+        <div>NOMINATION TYPE<br><select name="event_type">
+          <option>GLOBAL YOUTH EXCELLENCE AWARDS</option>
+          <option>GHANA PRESTIGIOUS AWARDS</option>
+          <option>GLOBAL YOUTH ACHIEVERS AWARDS</option>
+          <option>GHANA BUSINESS & ENTREPRENEURSHIP AWARDS</option>
+          <option>GHANA ENTERTAINMENT AWARDS & SUMMIT</option>
+          <option>MR & MRS ELEGANCE</option>
+        </select></div>
+
+        <input class="submit" type="submit" value="Submit">
+
+      </form>
+
+    </div>
+
+  </section>
+   <footer>
+      © 2025 BLACK EVENTS. All rights reserved
+    </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+  
+</body>
+</html>
