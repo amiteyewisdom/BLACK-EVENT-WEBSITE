@@ -32,7 +32,7 @@ img{display:block;max-width:100%;height:auto}
   padding:28px 20px;
   z-index:1600;
   transform: translateX(-340px); /* CLOSED by default across all sizes */
-  transition: transform .45s var(--ease), backdrop-filter .45s var(--ease), box-shadow .45s var(--ease);
+  transition: transform .25s ease-out, backdrop-filter .25s ease-out, box-shadow .25s ease-out;
   border-right:1px solid rgba(255,255,255,0.03);
   /* glass look */
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
@@ -157,3 +157,4 @@ footer{padding:20px 0;text-align:center;color:var(--muted);font-size:14px}
 
 /* accessibility focus */
 .sidebar a:focus, .cta:focus, button:focus { outline:3px solid rgba(185,145,44,0.18); outline-offset:3px; }
+
