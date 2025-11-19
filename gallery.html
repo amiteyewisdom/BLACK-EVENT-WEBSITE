@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Black Events — Gallery</title>
+  <link rel="shortcut icon" href="IMAGES/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallary.css">
+</head>
+<body>
+  <div class="app">
+    <aside id="sidebar" class="sidebar" aria-label="Main sidebar">
+      <div class="brand"><div class="logo-img"><img src="IMAGES/logo.jpg" alt="logo"></div><div class="brand-title">BLACK EVENTS</div></div>
+      <nav><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></nav>
+      <div class="contact-box"><strong>Contact</strong><div style="margin-top:8px;color:var(--muted-2)">Email: <a href="mailto:blackevents2@gmail.com" style="color:var(--gold);text-decoration:none">blackevents2@gmail.com</a><br/>Phone: <a href="tel:+233537083728" style="color:var(--gold);text-decoration:none">+233 53 708 3728</a></div></div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="hamburger" id="hamburger">☰</button><div style="font-family:'Playfair Display';color:var(--gold);font-weight:700">BLACK EVENTS</div></div><div></div></header>
+
+      <main style="margin-top:64px">
+        <section class="heropage fade-up">
+          <div class="container"><h1>Explore Our Gallery — Moments & Designs</h1><p style="color:var(--muted-2);margin-top:8px">Click an image to view a larger version.</p></div>
+        </section>
+
+        <div class="gallery fade-up">
+          <div class="gallery-item"><img src="IMAGES/bg1.jpg" alt="1"></div>
+          <div class="gallery-item"><img src="IMAGES/bg2.jpg" alt="2"></div>
+          <div class="gallery-item"><img src="IMAGES/bg3.jpg" alt="3"></div>
+          <div class="gallery-item"><img src="IMAGES/bg4.jpg" alt="4"></div>
+          <div class="gallery-item"><img src="IMAGES/bg6.jpg" alt="5"></div>
+          <div class="gallery-item"><img src="IMAGES/bg5.jpg" alt="6"></div>
+          <div class="gallery-item"><img src="IMAGES/bg7.jpg" alt="7"></div>
+          <div class="gallery-item"><img src="IMAGES/bg8.jpg" alt="8"></div>
+          <div class="gallery-item"><img src="IMAGES/bg9.jpg" alt="9"></div>
+          <div class="gallery-item"><img src="IMAGES/bg10.jpg" alt="10"></div>
+        </div>
+
+        <section class="projectpage container fade-up" style="margin-top:28px">
+          <h2 class="h2">Event Organization & Awards</h2>
+          <div class="can" style="margin-top:18px">
+            <div class="award"><img src="IMAGES/GYA.jpg" alt="GYA"><div class="divv"><h4>GLOBAL YOUTH EXCELLENCE AWARDS</h4><p>Empowering and celebrating young talents across sectors.</p><button onclick="document.getElementById('norm').scrollIntoView({behavior:'smooth'})">Nominate</button></div></div>
+
+            <div class="award"><img src="IMAGES/GEA.jpg" alt="GEA"><div class="divv"><h4>GLOBAL EMINENCE AWARDS</h4><p>Honoring excellence in arts & entertainment.</p><button onclick="document.getElementById('norm').scrollIntoView({behavior:'smooth'})">Nominate</button></div></div>
+
+            <div class="award"><img src="IMAGES/GEAMS.jpg" alt="GEAMS"><div class="divv"><h4>GHANA ENTERTAINMENT AWARDS & SUMMIT</h4><p>Celebrating the best in Ghanaian entertainment.</p><button onclick="document.getElementById('norm').scrollIntoView({behavior:'smooth'})">Nominate</button></div></div>
+          </div>
+        </section>
+
+        <section id="norm" class="norminatepage fade-up" style="padding:28px 20px">
+          <div class="norminate">
+            <div class="icon"><img src="IMAGES/logo.jpg" alt=""></div>
+            <form action="https://formspree.io/f/xzzraypj" method="POST">
+              <div>FULL NAME<br><input type="text" name="name" required></div>
+              <div>TEL<br><input type="tel" name="phone" required></div>
+              <div>NOMINATION TYPE<br>
+                <select name="event_type">
+                  <option>GLOBAL YOUTH EXCELLENCE AWARDS</option>
+                  <option>GHANA PRESTIGIOUS AWARDS</option>
+                  <option>GLOBAL YOUTH ACHIEVERS AWARDS</option>
+                  <option>GHANA BUSINESS & ENTREPRENEURSHIP AWARDS</option>
+                  <option>GHANA ENTERTAINMENT AWARDS & SUMMIT</option>
+                  <option>MR & MRS ELEGANCE</option>
+                </select>
+              </div>
+              <div style="margin-top:12px"><input class="submit" type="submit" value="Submit"></div>
+            </form>
+          </div>
+        </section>
+
+        <footer style="margin-top:30px"><div class="container">© 2025 BLACK EVENTS · All rights reserved</div></footer>
+      </main>
+    </div>
+  </div>
+
+<script>
+  // sidebar
+  document.getElementById('hamburger').addEventListener('click', ()=> { document.getElementById('sidebar').classList.toggle('open'); document.querySelector('.main').classList.toggle('shifted'); });
+
+  // gallery lightbox
+  document.querySelectorAll('.gallery-item img').forEach(img=>{
+    img.style.cursor='zoom-in';
+    img.addEventListener('click', ()=>{
+      const overlay = document.createElement('div'); overlay.className='lb-overlay';
+      const big = document.createElement('img'); big.src = img.src; big.alt = img.alt || '';
+      overlay.appendChild(big); overlay.addEventListener('click', ()=> overlay.remove());
+      document.body.appendChild(overlay);
+    });
+  });
+
+  // form handler
+  document.querySelectorAll('form').forEach(form=>{
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
+        if(res.ok){ alert('✅ Nomination submitted'); form.reset(); } else alert('❌ Something went wrong');
+      } catch(err){ alert('❌ Network error'); }
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Black Events — Home</title>
+  <link rel="shortcut icon" href="IMAGES/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- SIDEBAR (closed by default) -->
+    <aside id="sidebar" class="sidebar" aria-label="Main sidebar">
+      <div class="brand">
+        <div class="logo-img"><img src="IMAGES/logo.jpg" alt="logo"></div>
+        <div class="brand-title">BLACK EVENTS</div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="contact-box">
+        <strong>Contact</strong>
+        <div style="margin-top:8px;color:var(--muted-2)">
+          Email: <a href="mailto:blackevents2@gmail.com" style="color:var(--gold);text-decoration:none">blackevents2@gmail.com</a><br/>
+          Phone: <a href="tel:+233537083728" style="color:var(--gold);text-decoration:none">+233 53 708 3728</a><br/>
+          Instagram: <a href="https://instagram.com/official_blackevents" target="_blank" style="color:var(--gold);text-decoration:none">@official_blackevents</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <div id="main" class="main">
+      <header class="topbar" role="banner">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+          <div style="font-family:'Playfair Display';color:var(--gold);font-weight:700">BLACK EVENTS</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a href="gallery.html" style="color:var(--gold);text-decoration:none;font-weight:600">Gallery</a>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero" id="home" aria-labelledby="home-heading">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-inner container fade-up">
+          <h1 id="home-heading">Turning Moments Into Memories</h1>
+          <p>Black Events is your trusted partner for unforgettable event experiences — elegant weddings, professional corporate functions, and intimate parties. We plan, design and manage every detail.</p>
+          <a class="cta" href="booking.html">Book Consultation</a>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section aboutpage" id="about" aria-labelledby="about-heading">
+        <div class="container fade-up">
+          <h2 id="about-heading" class="h2">About <span style="color:var(--gold)">BLACK EVENTS</span></h2>
+          <div class="can">
+            <div class="pic"><img src="IMAGES/logo.jpg" alt="logo"></div>
+            <div class="abouttext">
+              <p><strong>Black Events</strong> is a full-service event planning company dedicated to crafting memorable experiences. Our team specializes in weddings, corporate events, birthdays, and bespoke celebrations — from concept to execution.</p>
+              <button onclick="location.href='gallery.html'">View Gallery</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section servicepage" id="service" aria-labelledby="services-heading">
+        <div class="container fade-up">
+          <h2 id="services-heading" class="h2">Our Services</h2>
+          <div class="can stagger" style="margin-top:18px">
+            <div class="card hover-card" style="--d:.06s">
+              <div class="icon"><img src="IMAGES/wedd.JPG" alt="" style="width:100%;height:80px;object-fit:cover"></div>
+              <h3>weddings</h3>
+              <p>We plan and organize beautiful weddings that reflect your love story and style.</p>
+            </div>
+
+            <div class="card hover-card" style="--d:.12s">
+              <div class="icon"><img src="IMAGES/event.jpg" alt="" style="width:100%;height:80px;object-fit:cover"></div>
+              <h3>Corporate Events</h3>
+              <p>From conferences to product launches — we handle logistics and styling for a seamless event.</p>
+            </div>
+
+            <div class="card hover-card" style="--d:.18s">
+              <div class="icon"><img src="IMAGES/hbd.JPG" alt="" style="width:100%;height:80px;object-fit:cover"></div>
+              <h3>Birthday Parties</h3>
+              <p>Fun, themed and memorable birthday parties tailored to your vision.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOK -->
+      <section class="section bookpage" id="book" aria-labelledby="book-heading">
+        <div class="container fade-up">
+          <h2 id="book-heading" class="h2">Book An Event</h2>
+
+          <form id="bookingForm" action="https://formspree.io/f/xzzraypj" method="POST" style="margin-top:12px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+              <input type="text" name="fullname" placeholder="Full name" required>
+              <input type="email" name="email" placeholder="Email address" required>
+              <input type="tel" name="phone" placeholder="TEL" required>
+              <input type="date" name="event_date" required>
+              <select name="event_type" required>
+                <option>Birthday party</option>
+                <option>Corporate</option>
+                <option>Wedding</option>
+                <option>Others</option>
+              </select>
+              <input type="text" name="event_details" placeholder="Event details" required>
+            </div>
+            <div style="margin-top:12px"><input class="submit" type="submit" value="Submit booking"></div>
+          </form>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="section testimonipage" aria-labelledby="test-heading">
+        <div class="container fade-up">
+          <h2 id="test-heading" class="h2">Client <span style="color:var(--gold)">Testimonials</span></h2>
+          <div class="testi" style="margin-top:18px">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div style="width:70px;height:70px;border-radius:50%;overflow:hidden"><img src="IMAGES/dcy.jpg" alt=""></div>
+              <div><h3>D-Cryme</h3><p style="color:var(--muted-2)">Music Artist</p></div>
+            </div>
+            <p style="margin-top:12px;color:var(--muted-2)">“Wow, just wow! The energy and execution were top-notch — unforgettable from start to finish.”</p>
+            <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)" />
+            <div style="display:flex;gap:12px;align-items:center">
+              <div style="width:70px;height:70px;border-radius:50%;overflow:hidden"><img src="IMAGES/lord.webp" alt=""></div>
+              <div><h3>Lord Paper</h3><p style="color:var(--muted-2)">Music Artist</p></div>
+            </div>
+            <p style="margin-top:12px;color:var(--muted-2)">“Still can’t get over how amazing everything turned out! You made it more than just an event.”</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <div class="container fade-up">
+          <h2 id="contact-heading" class="h2">Contact Us</h2>
+          <div class="contact-card" style="margin-top:12px">
+            <form id="contactForm" action="https://formspree.io/f/xzzraypj" method="POST" class="form2">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="email" name="email" placeholder="Your email" required>
+              <textarea name="Message" placeholder="Your message" required style="min-height:120px;border-radius:8px;padding:10px;background:#0b0b0b;border:1px solid rgba(255,255,255,0.04);color:var(--muted)"></textarea>
+              <div style="margin-top:12px"><input class="submit" type="submit" value="Send Message"></div>
+            </form>
+
+            <div class="info contact-card-right info" style="padding:18px">
+              <h3 style="color:var(--gold);margin-bottom:8px;font-family:'Playfair Display'">Visit or Call</h3>
+              <p style="color:var(--muted-2)">Email: <a href="mailto:blackevents2@gmail.com" style="color:var(--muted-2);text-decoration:none">blackevents2@gmail.com</a></p>
+              <p style="color:var(--muted-2)">Phone: <a href="tel:+233537083728" style="color:var(--muted-2);text-decoration:none">+233 53 708 3728</a></p>
+              <p style="color:var(--muted-2)">Instagram: <a href="https://instagram.com/official_blackevents" target="_blank" style="color:var(--muted-2);text-decoration:none">@official_blackevents</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer style="margin-top:28px">
+        <div class="container">© 2025 BLACK EVENTS · All rights reserved</div>
+      </footer>
+    </div>
+  </div>
+
+<script>
+  // Sidebar open/close (closed by default)
+  const sidebar = document.getElementById('sidebar');
+  const hamburger = document.getElementById('hamburger');
+  const main = document.getElementById('main');
+
+  hamburger.addEventListener('click', ()=>{
+    sidebar.classList.toggle('open');
+    main.classList.toggle('shifted');
+    // prevent body scroll when open
+    document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+  });
+
+  // close on link click (for mobile / small screens)
+  document.querySelectorAll('.sidebar a').forEach(a=>{
+    a.addEventListener('click', ()=> {
+      if(window.innerWidth < 980) {
+        sidebar.classList.remove('open'); main.classList.remove('shifted'); document.body.style.overflow='';
+      }
+    });
+  });
+
+  // Intersection Observer for reveal and stagger
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('fade-up');
+        if(entry.target.classList.contains('stagger')){
+          Array.from(entry.target.children).forEach((c,i)=> c.style.setProperty('--d', (i*0.06)+'s'));
+        }
+      }
+    });
+  }, {threshold: 0.12});
+
+  document.querySelectorAll('.fade-up, .stagger, .card, .hero-inner, .testi').forEach(el=> io.observe(el));
+
+  // Formspree submit handling (all forms)
+  document.querySelectorAll('form').forEach(form=>{
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const data = new FormData(form);
+      try{
+        const res = await fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
+        if(res.ok){ alert('✅ Message sent successfully!'); form.reset(); }
+        else { alert('❌ Something went wrong. Please try again.'); }
+      }catch(err){ alert('❌ Network error — please try again.'); }
+    });
+  });
+</script>
+</body>
+</html>
