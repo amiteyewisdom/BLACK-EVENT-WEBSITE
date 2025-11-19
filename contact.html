@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Black Events — Contact</title>
+  <link rel="shortcut icon" href="IMAGES/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside id="sidebar" class="sidebar">
+      <div class="brand"><div class="logo-img"><img src="IMAGES/logo.jpg" alt="logo"></div><div class="brand-title">BLACK EVENTS</div></div>
+      <nav><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul></nav>
+      <div class="contact-box"><strong>Contact</strong><div style="margin-top:8px;color:var(--muted-2)">Email: <a href="mailto:blackevents2@gmail.com" style="color:var(--gold);text-decoration:none">blackevents2@gmail.com</a><br/>Phone: <a href="tel:+233537083728" style="color:var(--gold);text-decoration:none">+233 53 708 3728</a></div></div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="hamburger" id="hamburger">☰</button><div style="font-family:'Playfair Display';color:var(--gold)">BLACK EVENTS</div></div><div></div></header>
+
+      <main style="margin-top:64px">
+        <section class="hero" style="min-height:40vh">
+          <div class="hero-bg" style="background-image:url('IMAGES/bg3.jpg')"></div>
+          <div class="hero-overlay" aria-hidden="true"></div>
+          <div class="hero-inner container fade-up"><h1>Contact Us</h1><p>Have questions? Send us a message or call the number below.</p></div>
+        </section>
+
+        <section class="section container fade-up" style="padding-top:24px">
+          <div class="contact-card">
+            <form action="https://formspree.io/f/xzzraypj" method="POST">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="email" name="email" placeholder="Your email" required>
+              <textarea name="message" placeholder="Your message" required style="min-height:140px;padding:10px;border-radius:8px;background:#0b0b0b;border:1px solid rgba(255,255,255,0.04);color:var(--muted)"></textarea>
+              <div style="margin-top:12px"><input class="submit" type="submit" value="Send Message"></div>
+            </form>
+
+            <div class="info">
+              <h3 style="color:var(--gold);font-family:'Playfair Display'">Visit or call</h3>
+              <p style="color:var(--muted-2)">Email: <a href="mailto:blackevents2@gmail.com" style="color:var(--muted-2);text-decoration:none">blackevents2@gmail.com</a></p>
+              <p style="color:var(--muted-2)">Phone: <a href="tel:+233537083728" style="color:var(--muted-2);text-decoration:none">+233 53 708 3728</a></p>
+              <p style="color:var(--muted-2)">Instagram: <a href="https://instagram.com/official_blackevents" target="_blank" style="color:var(--muted-2);text-decoration:none">@official_blackevents</a></p>
+            </div>
+          </div>
+        </section>
+
+        <footer style="margin-top:40px"><div class="container">© 2025 BLACK EVENTS · All rights reserved</div></footer>
+      </main>
+    </div>
+  </div>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', ()=> { document.getElementById('sidebar').classList.toggle('open'); document.querySelector('.main').classList.toggle('shifted'); });
+  document.querySelectorAll('form').forEach(form=>{
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
+        if(res.ok){ alert('✅ Message sent'); form.reset(); } else alert('❌ Something went wrong');
+      } catch(err){ alert('❌ Network error'); }
+    });
+  });
+</script>
+</body>
+</html>
