@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Black Events — Gallery</title>
+
+  <link rel="shortcut icon" href="IMAGES/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page-transition"></div>
+
+<!-- TOP NAVBAR -->
+<header class="topbar">
+  <div class="top-brand">BLACK EVENTS</div>
+
+  <div id="menuToggle" class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- RIGHT SIDE MENU -->
+<nav id="sideMenu" class="side-menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div id="menuOverlay" class="menu-overlay"></div>
+
+<main style="margin-top:100px">
+
+  <!-- HERO HEADER -->
+  <section class="section" style="padding-top:40px">
+    <div class="container" style="text-align:center">
+      <h1 style="font-family:'Playfair Display',serif;font-size:42px;color:var(--gold);margin-bottom:10px">
+        Our Signature Moments
+      </h1>
+      <p style="color:var(--muted-2)">
+        A curated showcase of weddings, corporate experiences, and luxury celebrations.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" style="padding-top:20px">
+    <div class="container">
+
+      <div class="can">
+
+        <div class="card gallery-card">
+          <img src="IMAGES/bg1.jpg" alt="Event 1">
+        </div>
+
+        <div class="card gallery-card">
+          <img src="IMAGES/bg2.jpg" alt="Event 2">
+        </div>
+
+        <div class="card gallery-card">
+          <img src="IMAGES/bg3.jpg" alt="Event 3">
+        </div>
+
+        <div class="card gallery-card">
+          <img src="IMAGES/bg4.jpg" alt="Event 4">
+        </div>
+
+        <div class="card gallery-card">
+          <img src="IMAGES/bg5.jpg" alt="Event 5">
+        </div>
+
+        <div class="card gallery-card">
+          <img src="IMAGES/bg6.jpg" alt="Event 6">
+        </div>
+
+        <div class="card gallery-card">
+          <img src="IMAGES/bg7.jpg" alt="Event 7">
+        </div>
+
+        <div class="card gallery-card">
+          <img src="IMAGES/bg8.jpg" alt="Event 8">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+
+      <div>
+        <h3>Black Events</h3>
+        <p>Premium event experiences crafted with precision and passion.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Booking</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>blackevents2@gmail.com</p>
+        <p>+233 53 708 3728</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 BLACK EVENTS · All rights reserved
+    </div>
+  </footer>
+
+</main>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const sideMenu = document.getElementById('sideMenu');
+const menuOverlay = document.getElementById('menuOverlay');
+
+menuToggle.addEventListener('click', ()=>{
+  sideMenu.classList.toggle('active');
+  menuOverlay.classList.toggle('active');
+});
+
+menuOverlay.addEventListener('click', ()=>{
+  sideMenu.classList.remove('active');
+  menuOverlay.classList.remove('active');
+});
+
+/* PAGE LOAD */
+window.addEventListener('load', ()=>{
+  document.body.classList.add('loaded');
+});
+
+/* PAGE TRANSITION */
+document.querySelectorAll('a[href]').forEach(link=>{
+  const url = link.getAttribute('href');
+  if(url && !url.startsWith('#') && !url.startsWith('http') && !url.includes('mailto') && !url.includes('tel')){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      const transition = document.querySelector('.page-transition');
+      transition.classList.add('active');
+      setTimeout(()=> window.location = url, 700);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
