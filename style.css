@@ -330,4 +330,90 @@ html,body{
   .form-wrapper{
     grid-template-columns:1fr;
   }
+
+}
+
+/* ============================= */
+/* MOBILE OPTIMIZATION SYSTEM    */
+/* ============================= */
+
+@media (max-width: 992px){
+
+  .section{
+    padding:80px 20px;
+  }
+
+  .topbar{
+    padding:0 20px;
+  }
+
+  .hero-content h1{
+    font-size:34px;
+  }
+
+  .hero-content p{
+    font-size:15px;
+  }
+
+  .cta{
+    padding:14px 26px;
+    font-size:14px;
+  }
+
+  .form-wrapper{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .form-card{
+    padding:40px 25px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea{
+    padding:18px 16px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+  }
+
+}
+
+/* Extra Small Devices */
+
+@media (max-width: 576px){
+
+  .section{
+    padding:70px 16px;
+  }
+
+  .hero-content{
+    width:95%;
+  }
+
+  .hero-content h1{
+    font-size:28px;
+  }
+
+  .form-intro h2{
+    font-size:24px;
+  }
+
+  .topbar{
+    height:65px;
+  }
+
+  main{
+    margin-top:100px !important;
+  }
+
 }
